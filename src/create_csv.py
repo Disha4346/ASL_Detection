@@ -8,7 +8,7 @@ from tqdm import tqdm
 from imutils import paths
 
 # get all the image paths
-image_paths = list(paths.list_images('../input/preprocessed_image'))
+image_paths = list(paths.list_images('../Data/preprocessed_image'))
 
 # create a DataFrame 
 data = pd.DataFrame()
@@ -38,7 +38,7 @@ for i in range(len(labels)):
 data = data.sample(frac=1).reset_index(drop=True)
 
 # save as CSV file
-data.to_csv('../input/data.csv', index=False)
+data.to_csv('../Data/data.csv', index=False)
 
 # pickle the binarized labels
 print('Saving the binarized labels as pickled file')
