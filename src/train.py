@@ -48,7 +48,7 @@ device = ('cuda:0' if torch.cuda.is_available() else 'cpu')
 print(f"Computation device: {device}")
 
 # read the data.csv file and get the image paths and labels
-df = pd.read_csv('../input/data.csv')
+df = pd.read_csv('../Data/data.csv')
 X = df.image_path.values
 y = df.target.values
 
