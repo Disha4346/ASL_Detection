@@ -33,7 +33,7 @@ model.load_state_dict(torch.load('../outputs/model.pth'))
 print(model)
 print('Model loaded')
 
-image = cv2.imread(f"../input/asl_alphabet_test/asl_alphabet_test/{args['img']}")
+image = cv2.imread(f"../Data/asl_alphabet_test/asl_alphabet_test/{args['img']}")
 image_copy = image.copy()
  
 image = aug(image=np.array(image))['image']
